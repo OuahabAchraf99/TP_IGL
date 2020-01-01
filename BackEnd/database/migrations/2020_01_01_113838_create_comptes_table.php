@@ -16,9 +16,9 @@ class CreateComptesTable extends Migration
         Schema::create('comptes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->String(Username);
-            $table->String(Password);
-            $table->String(Type);
+            $table->String('Username');
+            $table->String('Password');
+            $table->String('Type');
             
             
         });

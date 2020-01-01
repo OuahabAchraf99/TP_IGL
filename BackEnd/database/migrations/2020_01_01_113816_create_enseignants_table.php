@@ -16,15 +16,15 @@ class CreateEnseignantsTable extends Migration
         Schema::create('enseignants', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->String(Nom);
-            $table->String(Prenom);
-            $table->String(Datenaissance);
-            $table->String(Lieunaissance);
-            $table->String(Adress);
-            $table->String(Matricule)->defalt(Null);
-            $table->String(Annee)->defalt(Null);
-            $table->String(Numtelephone)->defalt(Null);
-            $table->String(Module)->defalt(Null);
+            $table->String('Nom');
+            $table->String('Prenom');
+            $table->String('Datenaissance');
+            $table->String('Lieunaissance');
+            $table->String('Adress');
+            $table->String('Matricule')->defalt(Null);
+            $table->String('Annee')->defalt(Null);
+            $table->String('Numtelephone')->defalt(Null);
+            $table->String('Module')->defalt(Null);
             
         });
     }
