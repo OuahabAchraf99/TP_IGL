@@ -18,4 +18,4 @@ Route::get('/', function () {
 Route::post('/uploadfile','UploadFileApi@createFile');
 Route::get('/uploadfile','UploadFileController@createFile');
 Route::post('/axios','UploadFileController@createFile');
-Route::post('/Etudiant', 'EtudiantController@store');
+Route::post('/Etudiant', 'EtudController@store');
