@@ -22,8 +22,8 @@ class CreateEtudiantsTable extends Migration
             $table->String('Lieunaissance');
             $table->String('Adress');
             $table->String('Matricule')->defalt(Null);
-            $table->String('Annee')->defalt(Null);
-            $table->String('Groupe')->defalt(Null);
+           
+            
             $table->String('Numtelephone')->defalt(Null);
         });
     }

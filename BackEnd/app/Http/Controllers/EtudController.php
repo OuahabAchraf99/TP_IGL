@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Etudiant;
 use App\Compte;
-use App\Helpers\Helper;
+use App\Helpers\APIHelper;
 
 class EtudController extends Controller
 {
