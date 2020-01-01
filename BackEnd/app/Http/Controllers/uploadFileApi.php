@@ -34,7 +34,7 @@ class uploadFileApi extends Controller
             $file->save();
             //return view('addFile');
         }
-        return view('addFile');
+        return redirect('/uploadfile');
     }
 
     public function getFile($id) {
