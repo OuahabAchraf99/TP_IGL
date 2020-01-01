@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Etudiant;
 use App\Compte;
+use App\Helpers\Helper;
+
 class EtudiantContoller extends Controller
 {
     /**
@@ -50,11 +52,11 @@ class EtudiantContoller extends Controller
      $compte->Type="Etudiant";
      $compte->save();
      if($etudiant_save){
-         $response = APIHelper::createAPIResponse(false,"201",$etudiant->Nom.Student was created succesfully,null);
+       $response = APIHelper::createAPIResponse(false,"201",$etudiant->Nom.'Student was created succesfully',null);
         return response()->json($response,201);
 
      }else{
-        $response = APIHelper::createAPIResponse(true,"401",$etudiant->Nom.creation failed  ,null);
+        $response = APIHelper::createAPIResponse(true,"401",$etudiant->Nom.'creation failed'  ,null);
         return response()->json($response,401);
 
 
