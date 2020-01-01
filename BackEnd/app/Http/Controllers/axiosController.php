@@ -8,7 +8,7 @@ class axiosController extends Controller
 {
     public function rediriger(Request $request)
     {
-        
+
         return view('axiosView');
     }
 }
