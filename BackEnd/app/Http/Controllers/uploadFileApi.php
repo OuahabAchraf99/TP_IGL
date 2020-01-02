@@ -25,18 +25,20 @@ class uploadFileApi extends Controller
         // logic to create a File record goes here
         /*$post = Uploaded_file::create($request->all());
         return response()->json($post);*/
-        if($request->isMethod('post'))
-        {
+
             $file= new Uploaded_file();
-            /*$f=json_decode($request->all());
-            $file->fileName= $f[0];
-            $file->fileLink= $f[1];
-            */
             $file->fileName= $request->fileName;
             $file->fileLink= $request->fielLink;
-            $file->save();
-        }
-        return redirect('/uploadfile');
+            $issaved=$file->save();
+            if($issaved){
+                $response = APIHelper::createAPIResponse(false,"201",'File was uploaded succesfully',null);
+                return response()->json($response,201);
+
+            }else{
+                $response = APIHelper::createAPIResponse(true,"401",'Upload failed',null);
+                return response()->json($response,401);
+            }
+
     }
 
     public function getFile($id) {
