@@ -28,11 +28,13 @@ class uploadFileApi extends Controller
         if($request->isMethod('post'))
         {
             $file= new Uploaded_file();
-            $f=json_decode($request->all());
+            /*$f=json_decode($request->all());
             $file->fileName= $f[0];
             $file->fileLink= $f[1];
+            */
+            $file->fileName= $request->fileName;
+            $file->fileLink= $request->fielLink;
             $file->save();
-            //return view('addFile');
         }
         return redirect('/uploadfile');
     }

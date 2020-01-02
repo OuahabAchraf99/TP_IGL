@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/uploadfile','UploadFileApi@createFile');
-Route::get('/uploadfile','UploadFileController@createFile');
-Route::post('/axios','UploadFileController@createFile');
+Route::post('/uploadfile','uploadFileApi@createFile');
+Route::get('/uploadfile','uploadFileApi@createFile');
+
