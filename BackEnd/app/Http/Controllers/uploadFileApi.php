@@ -22,11 +22,7 @@ class uploadFileApi extends Controller
         // logic to get all Files goes here
     }
 
-    public function createFile(Request $request) {
-        // logic to create a File record goes here
-        /*$post = Uploaded_file::create($request->all());
-        return response()->json($post);*/
-
+  /*  public function createFile(Request $request) {
             $file= new Uploaded_file();
             $file->fileName= $request->fileName;
             $file->fileLink= $request->fileLink;
@@ -40,7 +36,37 @@ class uploadFileApi extends Controller
                 return response()->json($response,401);
             }
 
-    }
+    }*/
+            public function createFile(Request $request)
+            {
+                if($request->hasFile('file'))
+                {
+                    //$file= new Uploaded_file();
+                    $name=$request->file->getClientOriginalName();
+                    $isuploaded=$request->file->storeAs('public/upload',$name);
+                    if($isuploaded)
+                    {
+                        $file= new Uploaded_file();
+                        $file->fileName=$name;
+                        $issaved=$file->save();
+                        if($issaved){
+                            $response = APIHelper::createAPIResponse(false,"201",'File was uploaded succesfully and Name was saved in DB',null);
+                            return response()->json($response,201);
+
+                        }else{
+                            $response = APIHelper::createAPIResponse(true,"401",'File was Uploaded succesfully but Name not sved in Db',null);
+                            return response()->json($response,401);
+                        }
+                    }
+                    else
+                    {
+                        $response = APIHelper::createAPIResponse(true,"401",'Uploaded Failed',null);
+                        return response()->json($response,401);
+                    }
+
+                }
+            }
+
 
     public function getFile($id) {
         // logic to get a File record goes here
