@@ -17,7 +17,10 @@ class VerifyCsrfToken extends Middleware
      * The URIs that should be excluded from CSRF verification.
      *
      * @var array
-     */
+     */  
+
+
+     // on faire un exclude a les routes pour eviter les problemes de CSRFfield 
     protected $except = [ 'Etudiant','/uploadfile','Etudiants'
         //
     ];
