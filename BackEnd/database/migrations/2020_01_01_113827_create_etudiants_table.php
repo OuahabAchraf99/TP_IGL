@@ -21,10 +21,10 @@ class CreateEtudiantsTable extends Migration
             $table->String('Datenaissance');
             $table->String('Lieunaissance');
             $table->String('Adress');
-            $table->String('Matricule')->defalt(Null);
+            $table->String('Matricule')->default(Null);
            
             
-            $table->String('Numtelephone')->defalt(Null);
+            $table->String('Numtelephone')->default(Null);
             
         });
     }
