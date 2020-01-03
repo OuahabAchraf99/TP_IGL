@@ -25,6 +25,7 @@ class CreateEtudiantsTable extends Migration
            
             
             $table->String('Numtelephone')->defalt(Null);
+            
         });
     }
 

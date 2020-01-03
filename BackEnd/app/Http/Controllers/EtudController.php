@@ -52,10 +52,10 @@ class EtudController extends Controller
         $etudiant->Numtelephone=$request->Numtelephone;
         $etudiant->Matricule=$request->Matricule;
         $etudiant_save=$etudiant->save();
-        $last = schooldb::table('etudiants')->latest('id')->first();
+        //$last = shcooldb::table('etudiants')->latest('id')->first();
         $compte->Username=$request->Nom.$request->Prenom;
         $compte->Password=$request->Lieunaissance.$request->Datenaissance;
-        $compte->etudiants_id=$request->etudiants_id;
+        //$compte->etudiants_id=$request->etudiants_id;
         $compte->Type="Etudiant";
         $compte->save();
         if($etudiant_save){
