@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "9ae9ffef-5f70-4cbb-8ff8-48eda5708f5b",
+		"name": "Gestion de scholarite API",
+		"description": "# Introduction\nnotre APIs offre des services pour la gestion de scholarité \nAjouter Etudiant \nAjouter Document \n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/Etudiant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "/Etudiant",
+					"path": [
+						"Etudiant"
+					]
+				},
+				"description": "fonction pour engistrer un etudaint dans la database ainsi cree on compte "
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/Etudiant",
+							"path": [
+								"Etudiant"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "/Etudiants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "/Etudiants",
+					"path": [
+						"Etudiants"
+					]
+				},
+				"description": "fonction renvoie tout les etudiants existant dans la database"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/Etudiants",
+							"path": [
+								"Etudiants"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "/uploadfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "/uploadfile",
+					"path": [
+						"uploadfile"
+					]
+				},
+				"description": "fonction pour ajouter un document dans la database"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/uploadfile",
+							"path": [
+								"uploadfile"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fa9d0229-71f3-4058-b8c7-64e1727159ae",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f08bc997-b4e9-4526-a7ed-1c2a48984233",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
