@@ -29,7 +29,7 @@ class uploadFileApi extends Controller
 
             $file= new Uploaded_file();
             $file->fileName= $request->fileName;
-            $file->fileLink= $request->fielLink;
+            $file->fileLink= $request->fileLink;
             $issaved=$file->save();
             if($issaved){
                 $response = APIHelper::createAPIResponse(false,"201",'File was uploaded succesfully',null);
