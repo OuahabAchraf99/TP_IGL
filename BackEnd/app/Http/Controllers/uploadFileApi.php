@@ -44,7 +44,7 @@ class uploadFileApi extends Controller
         {
             //$file= new Uploaded_file();
             $name=$request->file->getClientOriginalName();
-            $isuploaded=$request->file->storeAs('public/upload',$name);
+            $isuploaded=$request->file->storeAs('public',$name);
             if($isuploaded)
             {
                 $file= new Uploaded_file();
