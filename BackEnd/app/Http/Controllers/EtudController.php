@@ -41,7 +41,7 @@ class EtudController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { //on faire un engistrement pour chaque etudiant et son compte 
         $etudiant = new Etudiant();  
         $compte=new Compte(); 
         $etudiant->Nom=$request->Nom;
@@ -52,17 +52,17 @@ class EtudController extends Controller
         $etudiant->Numtelephone=$request->Numtelephone;
         $etudiant->Matricule=$request->Matricule;
         $etudiant_save=$etudiant->save();
-        //$last = shcooldb::table('etudiants')->latest('id')->first();
+        
         $compte->Username=$request->Nom.$request->Prenom;
         $compte->Password=$request->Lieunaissance.$request->Datenaissance;
-        //$compte->etudiants_id=$request->etudiants_id;
+        
         $compte->Type="Etudiant";
         $compte->save();
-        if($etudiant_save){
+        if($etudiant_save){ //si l'opération est realiser avec succés on vas repondre par un fichier json qui contient les informations générer par le APIHelper 
           $response = APIHelper::createAPIResponse(false,"201",$etudiant->Nom.'Student was created succesfully',null);
            return response()->json($response,201);
    
-        }else{
+        }else{ //meme choses pour l'échec 
            $response = APIHelper::createAPIResponse(true,"401",$etudiant->Nom.'creation failed'  ,null);
            return response()->json($response,401);
 

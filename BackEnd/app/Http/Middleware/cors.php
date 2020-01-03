@@ -14,7 +14,7 @@ class cors
      * @return mixed
      */
     public function handle($request, Closure $next) {
-
+      // cette class a été cree pour gerer les erreur de acces control pour le front-end a notre Api crée 
         return $next($request)
           ->header('Access-Control-Allow-Origin', '*')
           ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')

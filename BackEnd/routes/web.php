@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+// les routes pour gérer les fonctionalités 
 Route::post('/uploadfile','uploadFileApi@createFile');
 
 
