@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d30d76ab-fbc0-4861-9565-f9e8e0c68647" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EtudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EtudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/uploadFileApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/uploadFileApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_01_180113_create_uploaded_files_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_01_180113_create_uploaded_files_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/uploadFileApi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="187">
+              <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
               </folding>
@@ -67,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_01_180113_create_uploaded_files_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="85">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -140,9 +140,9 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/tests/Unit/SampleTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_01_01_180113_create_uploaded_files_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EtudController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/uploadFileApi.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_01_01_180113_create_uploaded_files_table.php" />
       </list>
     </option>
   </component>
@@ -341,12 +341,12 @@
       <workItem from="1577890868580" duration="7456000" />
       <workItem from="1577905503867" duration="13133000" />
       <workItem from="1577962174584" duration="3377000" />
-      <workItem from="1577972375327" duration="14638000" />
+      <workItem from="1577972375327" duration="15305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42200000" />
+    <option name="totallyTimeSpent" value="42867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -593,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_01_180113_create_uploaded_files_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -619,11 +612,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/uploadFileApi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="187">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_01_180113_create_uploaded_files_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>

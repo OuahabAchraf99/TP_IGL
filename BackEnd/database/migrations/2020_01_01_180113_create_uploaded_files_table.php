@@ -18,8 +18,6 @@ class CreateUploadedFilesTable extends Migration
             $table->timestamps();
             $table->String('fileName')->nullable();
             $table->String('fileLink')->nullable();
-            $table->dateTime('uploadedOn')->nullable();
-            $table->boolean('deleted')->nullable();
         });
     }
 
