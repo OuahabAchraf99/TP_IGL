@@ -12,7 +12,7 @@ class CheckStudent extends Component {
         persons:[],
     };
   componentDidMount(){
-    Axios.get('http://jsonplaceholder.typicode.com/users').then(res=>{
+    Axios.get('http://localhost:8000/Etudiant').then(res=>{
 
     console.log('no problem here');
         this.setState({persons:res.data});

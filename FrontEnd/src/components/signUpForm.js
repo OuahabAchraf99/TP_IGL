@@ -38,9 +38,28 @@ class SignUpForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        axios.get("https://api.github.com/users/john");
-        console.log('The form was submitted with the following data:');
-        console.log(this.state);
+        axios.post("http://localhost:8000/Etudiant",
+            {
+                "Nom":this.state.name,
+            	"Prenom":this.state.prenom,
+                "Datenaissance":this.state.dateNaissance,
+	            "Lieunaissance":this.state.lieuNaissance,
+            	"Adress":this.state.adress,
+            	"Numtelephone":this.state.numeroTele,
+            	"Matricule":this.state.matricule
+            }
+        ).
+        then(
+            res=>{
+                console.log(res);
+            }
+        ).catch(
+            res=>{
+                console.log(res);
+            }
+        );
+        
+        
     }
 
     

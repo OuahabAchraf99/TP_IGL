@@ -49,14 +49,16 @@ class AjouterDocument extends Component {
 
     fileUploadHandler= ()=>{
       const fd = new FormData();
-      fd.append('image',this.state.selectedFile,this.state.selectedFile.name)
-        axios.post('i need to put le link here',fd,{
-          onUploadProgress: progressEvent=>{
-            console.log('onUploadProgress'+Math.round(ProgressEvent.loaded / progressEvent.total)*100+'%')
-        }
-      }).then(res=>{
-          console.log(res);
-        });
+      fd.append('image',this.state.selectedFile,this.state.selectedFile.name);
+        axios.post('http://127.0.0.1:8000/uploadfile',{
+          "fileLink":this.state.selectedFile.name,
+          "fileName":this.state.selectedFile.name,
+          }).then(res=>{
+          console.log(this.state.selectedFile.name);
+          console.log(this.state.selectedFile.mozFullPath);
+        }).catch(
+          console.log('problem here')
+        );
     }
     render() {
         const { fruites,inputValue} = this.state;
