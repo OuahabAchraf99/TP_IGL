@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Uploaded_file;
 use Illuminate\Http\Request;
+use App\Helpers\APIHelper;
 
 class uploadFileApi extends Controller
 {
