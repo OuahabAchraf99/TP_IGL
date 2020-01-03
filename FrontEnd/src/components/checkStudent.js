@@ -12,9 +12,9 @@ class CheckStudent extends Component {
         persons:[],
     };
   componentDidMount(){
-    Axios.get('http://localhost:8000/Etudiant').then(res=>{
+    Axios.get('http://localhost:8000/Etudiants').then(res=>{
 
-    console.log('no problem here');
+    console.log(res);
         this.setState({persons:res.data});
         
     });
@@ -36,14 +36,15 @@ class CheckStudent extends Component {
                     </tr>
                 {this.state.persons.map(person=>
                     <tr>
+                        
                       <th>{person.id}</th>
-                      <th>{person.name}</th>
-                      <th>{person.username}</th>
-                      <th>{person.email}</th>
-                      <th>{person.address.street}</th>
-                      <th>{person.phone}</th>
-                      <th>{person.website}</th>
-                      <th>{person.company.name}</th>
+                      <th>{person.Nom}</th>
+                      <th>{person.Prenom}</th>
+                      <th>{person.Datenaissance}</th>
+                      <th>{person.Lieunaissance}</th>
+                      <th>{person.Adress}</th>
+                      <th>{person.Numtelephone}</th>
+                      <th>{person.Matricule}</th>
                     </tr>
                 )}
           </table>

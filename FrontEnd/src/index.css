@@ -27,9 +27,9 @@ nav {
   padding: 12px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -webkit-box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
-box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 2px 13px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 13px -3px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 13px -3px rgba(0,0,0,0.75);
 }
 
 

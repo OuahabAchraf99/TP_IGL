@@ -12,10 +12,9 @@ class MainPage extends Component {
       
         <div className="MainPage">
             <Header/>
-            <div className="problemnav"/>
-            <Route exact path="/home" component={Main}/>
-            <Route exact path="/home/ajouterEtudiant" component={SignUpForm}/>
-            <Route exact path="/home/ajouterDocument" component={AjouterDocument}/>
+            <AjouterDocument/>
+            <SignUpForm/>
+            
         </div>
     );
   }

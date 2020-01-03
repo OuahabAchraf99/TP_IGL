@@ -5,49 +5,30 @@ import './sign.css';
 
 
 
-const ListItem = ({ value, onClick }) => (
-    <div className="divListItem" onClick={onClick}>{value}</div>
-  );
-  
-  const List = ({ items, onItemClick }) => (
-    <div >
-      {
-        items.map((item, i) => <ListItem key={i} value={item} onClick={onItemClick} />)
-      }
-    </div>
-  );
-  
 
 class AjouterDocument extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          inputValue: '',
-          fruites: ['Apple', 'Banana', 'Orange'],
-
-          selectedFile:null
+          selectedFile:''
         };
     }
 
-    onClick = () => {
-        const { inputValue, fruites } = this.state;
-        if (inputValue) {
-          const nextState = [...fruites, inputValue];
-          this.setState({ fruites: nextState, inputValue: '' });
-        }
-    }
     
-    onChange = (e) => this.setState({ inputValue: e.target.value });
+    
     
     handleItemClick = (e) => {console.log(e.target.innerHTML)}
     
     fileSelectedHandler= event =>{
       this.setState({
         selectedFile: event.target.files[0]
-      })
+      });
+      console.log(this.state.selectedFile);
+
     }
 
     fileUploadHandler= ()=>{
+      console.log(this.state.selectedFile);
       const fd = new FormData();
       fd.append('image',this.state.selectedFile,this.state.selectedFile.name);
         axios.post('http://127.0.0.1:8000/uploadfile',{
@@ -55,29 +36,54 @@ class AjouterDocument extends Component {
           "fileName":this.state.selectedFile.name,
           }).then(res=>{
           console.log(this.state.selectedFile.name);
-          console.log(this.state.selectedFile.mozFullPath);
+          console.log(this.state.selectedFile.webkitRelativePath);
         }).catch(
           console.log('problem here')
         );
     }
+    /*
+    onChange(e){
+      let files=e.target.files;
+      let reader=new FileReader();
+      reader.readAsDataURL(files[0]);
+      reader.onload=(e)=>{
+        
+        console.warn("img data",e.target.result);
+        const FormData={file:e.target.result}
+        return post("127.0.0.1:8000",formData)
+          .then(res=> console.warn("result",res));<input type="file" name="file" onChange={(e)=>this.onChange(e)}/>
+      }
+      
+    }*/
     render() {
-        const { fruites,inputValue} = this.state;
-    
         return (     
-              
               <div className="mainAjouterDocument">
-                <div className="divAjouterDocument">
-
-                    <input type="text" value={inputValue} onChange={this.onChange} />
-                    <button onClick={this.onClick}>Add</button>
-                      <p>voila mon fichier <a href="./TD1.pdf" download="TD1.pdf">voila</a>  </p>
-                      <List items={fruites} onItemClick={this.handleItemClick} />
+                <div className="divAjouterDocument"> 
 
                     <input style={{display:'none'}} type="file" onChange={this.fileSelectedHandler}
-                    ref={fileInput=>this.fileInput=fileInput}/>
-                    <button onClick={() => this.fileInput.click()}>select file</button>
-                    <button onClick={this.fileUploadHandler}>UpLoad</button>
-                </div>    
+                    ref={fileInput=>this.fileInput=fileInput} fullPath/>
+                    
+                     
+                      <h3>Information sur le fichier</h3>
+                      
+                      <label  >Nom du document :  </label>
+                      <label  >{this.state.selectedFile.name}</label>
+                      <br/>
+                      <label  >Taille du document :  </label>
+                      <label  >{this.state.selectedFile.size} oct</label>
+                      <br/>
+                      <label  >Derniere modification :  </label>
+                      <label  >{this.state.selectedFile.name}</label>
+                      <br/>
+                      <label  >Type du fichier :  </label>
+                      <label  >{this.state.selectedFile.type}</label>
+                    <br/>
+                    <br/>
+                    <button className="addButton" onClick={() => this.fileInput.click()}/>
+                    <button className="uploadButton" onClick={this.fileUploadHandler}/>
+
+                
+               </div>    
               </div>
     );
   }

@@ -7,21 +7,36 @@
     color: black;
   }
 
+  .uploadButton{
+    height: 65px;
+    width: 65px;
+    background-image: url("../images/upload.png");
+    background-size:cover ;
+    background-color: white;
+    margin-left: 20px ;
+  }
+
+  .addButton{
+    height: 65px;
+    width: 65px;
+    background-image:url("../images/add.png") ;
+    background-size: cover; 
+    background-color: white;
+    margin-left: 60px;
+    
+  }
   .mainAjouterDocument{
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 90vh;
-    background: url("../images/pile-of-books2.png");
-    display: flex;
-    
+    background-color: rgb(151, 229, 219);
   }
 
   .divAjouterDocument{
     position: absolute;
-    top: 50%;
-    left: 50%;
-   
-    transform: translate(-50%,-50%);
+    margin-top: 150px;
+    margin-left: 100px;
+    z-index: 1;
   }
 
   .divListItem{
@@ -37,7 +52,9 @@
   }
 
   .MainPage{
+    position: absolute;
     height: 100%;
+    width: 100%;
   }
 
   .Main{
@@ -80,9 +97,13 @@
     height: 100%;
   }
 
-/*  .SignUpForm{
-    width: 600px;
-  }*/
+  .SignUpForm{
+    position: relative;
+    background-color: white;
+    margin-left: 50%;
+    width: 50%;
+    
+  }
 
   .SignInForm{
     width: 330px;
@@ -142,6 +163,11 @@
 
 /***********************************************/
 /*c ete le nom de la classe SignUpForm*/
+  .FormFields{
+
+    margin-top:30px; 
+  }
+
 .FormCenter {
     margin-bottom: 100px;
   }

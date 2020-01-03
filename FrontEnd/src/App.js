@@ -6,6 +6,7 @@ import Switcher from './components/switcher';
 import MainPage from './components/mainPage';
 import './components/sign.css';
 import CheckStudent from './components/checkStudent';
+import AjouterDocument from './components/ajouterDocument';
 
 
 
@@ -30,6 +31,7 @@ class App extends Component {
           <Route exact path="/"  component={Switcher}></Route>
           <Route path="/home" component={MainPage}></Route>
           <Route exact path="/hello" component={CheckStudent}></Route>
+          <Route exact path="/add" component={AjouterDocument}/>
         </div>    
       </Router>
     );
