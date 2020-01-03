@@ -17,7 +17,11 @@ class EtudController extends Controller
      */
     public function index()
     {
-        //
+    
+        $etudiants=Etudiant::all();
+        return response()->json($etudiants);
+
+
     }
 
     /**

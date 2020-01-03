@@ -19,3 +19,4 @@ Route::post('/uploadfile','uploadFileApi@createFile');
 
 
 Route::post('Etudiant', 'EtudController@store');
+Route::get('Etudiants', 'EtudController@index');
