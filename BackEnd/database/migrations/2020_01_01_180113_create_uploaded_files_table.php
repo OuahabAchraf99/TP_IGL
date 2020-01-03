@@ -17,6 +17,7 @@ class CreateUploadedFilesTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->String('fileName')->nullable();
+            $table->String('fileLink')->nullable();
         });
     }
 
