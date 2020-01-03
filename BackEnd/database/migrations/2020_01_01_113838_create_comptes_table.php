@@ -19,6 +19,8 @@ class CreateComptesTable extends Migration
             $table->String('Username');
             $table->String('Password');
             $table->String('Type');
+            $table->integer('etudiants_id')->unsigned();
+            $table->foreign('etudiants_id')->references('id')->on('etudiants');
             
             
         });
