@@ -7,6 +7,11 @@
     color: black;
   }
 
+  .CheckStudent table tr th{
+    border: black;
+
+  }
+
   .uploadButton{
     height: 65px;
     width: 65px;
@@ -166,7 +171,7 @@
 
 /***********************************************/
 /*c ete le nom de la classe SignUpForm*/
-  .FormFields{
+  .FormFieldsup{
     margin-left: 90px;
     margin-top:30px; 
   }

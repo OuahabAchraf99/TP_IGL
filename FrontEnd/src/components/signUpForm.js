@@ -69,7 +69,7 @@ class SignUpForm extends Component {
         return (
             
         <div className="SignUpForm">
-            <form onSubmit={this.handleSubmit} className="FormFields">
+            <form onSubmit={this.handleSubmit} className="FormFieldsup">
               <table>
                 <tr>
                 

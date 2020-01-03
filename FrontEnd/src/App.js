@@ -30,8 +30,7 @@ class App extends Component {
         <div> 
           <Route exact path="/"  component={Switcher}></Route>
           <Route path="/home" component={MainPage}></Route>
-          <Route exact path="/hello" component={CheckStudent}></Route>
-          <Route exact path="/add" component={AjouterDocument}/>
+          <Route path="/listeEtudiant" component={CheckStudent}></Route>
         </div>    
       </Router>
     );
