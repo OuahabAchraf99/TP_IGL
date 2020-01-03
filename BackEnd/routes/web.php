@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::post('/uploadfile','uploadFileApi@createFile');
-Route::post('/Etudiant', 'EtudController@store');
+Route::post('/Etudiant/ajouter', 'EtudController@store');
 
