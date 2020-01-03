@@ -64,20 +64,20 @@ class AjouterDocument extends Component {
                     ref={fileInput=>this.fileInput=fileInput} fullPath/>
                     
                      
-                      <h3>Information sur le fichier</h3>
+                      <h3>Information sur le fichier selectioner</h3>
                       
                       <label  >Nom du document :  </label>
                       <label  >{this.state.selectedFile.name}</label>
-                      <br/>
+                      <br/><br/>
                       <label  >Taille du document :  </label>
                       <label  >{this.state.selectedFile.size} oct</label>
-                      <br/>
+                      <br/><br/>
                       <label  >Derniere modification :  </label>
                       <label  >{this.state.selectedFile.name}</label>
-                      <br/>
+                      <br/><br/>
                       <label  >Type du fichier :  </label>
                       <label  >{this.state.selectedFile.type}</label>
-                    <br/>
+                    <br/><br/><br/>
                     <br/>
                     <button className="addButton" onClick={() => this.fileInput.click()}/>
                     <button className="uploadButton" onClick={this.fileUploadHandler}/>

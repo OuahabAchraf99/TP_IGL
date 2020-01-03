@@ -28,7 +28,7 @@
   .mainAjouterDocument{
     position: relative;
     width: 50%;
-    height: 90vh;
+    height: 100%;
     background-color: rgb(151, 229, 219);
   }
 
@@ -52,9 +52,11 @@
   }
 
   .MainPage{
+    
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 200vh;
+    
   }
 
   .Main{
@@ -98,10 +100,11 @@
   }
 
   .SignUpForm{
+    margin-top: 100px;
     position: relative;
     background-color: white;
-    margin-left: 50%;
     width: 50%;
+    float:right;
     
   }
 
@@ -164,7 +167,7 @@
 /***********************************************/
 /*c ete le nom de la classe SignUpForm*/
   .FormFields{
-
+    margin-left: 90px;
     margin-top:30px; 
   }
 

@@ -26,8 +26,8 @@ class Nav extends Component {
               <Link to="/home"><li className="logo">School<span>Planet</span></li></Link>
           </ul>
           <ul>
-              <li><Link exact to='/home/ajouterDocument' className="About" >Ajouter Document </Link></li>
-              <li><Link exact to='/home/ajouterEtudiant' className="About" >Ajouter Etudiant </Link></li>
+              <li><Link exact to='/home/ajouterDocument' className="About" >Afficher la liste des fichiers </Link></li>
+              <li><Link exact to='/home/ajouterEtudiant' className="About" >Afficher la liste des Etudiants </Link></li>
               <li><Link to='/' className="About">SignOut</Link></li>
               
               

@@ -74,7 +74,7 @@ class SignUpForm extends Component {
                 <tr>
                 
                     <th>
-                        <div className="FormField" style={{ "margin-top": "30px" }}>
+                        <div className="FormField" >
                             <label className="FormFieldLabel" htmlFor="name">Nom</label>
                             <input type="text" id="name" className="FormFieldInput" placeholder="Entrer le nom copmlet" name="name" value={this.state.name} onChange={this.handleChange} />
                         </div>

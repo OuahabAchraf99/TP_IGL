@@ -11,9 +11,9 @@ class MainPage extends Component {
     return (
       
         <div className="MainPage">
-            <Header/>
+            <Header/><SignUpForm/>
             <AjouterDocument/>
-            <SignUpForm/>
+            
             
         </div>
     );
